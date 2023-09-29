@@ -51,6 +51,11 @@ SubscriptionOpen62541::SubscriptionOpen62541 (const std::string &name, SessionOp
     session.subscriptions[name] = this;
 }
 
+SubscriptionOpen62541::~SubscriptionOpen62541()
+{
+    this->clear();
+}
+
 void SubscriptionOpen62541::setOption(const std::string &name, const std::string &value)
 {
     if (debug || name == "debug")

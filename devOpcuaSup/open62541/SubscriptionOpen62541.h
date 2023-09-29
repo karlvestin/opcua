@@ -50,6 +50,7 @@ public:
      */
     SubscriptionOpen62541(const std::string &name, SessionOpen62541 &session,
                           const double publishingInterval);
+    ~SubscriptionOpen62541() override;
 
     /**
      * @brief Set an option for the subscription. See DevOpcua::Subscription::setOption
